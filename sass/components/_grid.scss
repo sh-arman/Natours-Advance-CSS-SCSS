@@ -1,0 +1,59 @@
+// GRID
+.row {
+  max-width: 114rem;
+
+
+  // background-color: yellow;
+  margin: 0 auto;
+  &:not(:last-child){
+    margin-bottom: 5rem;
+  }
+  @include clearFix;
+}
+
+.col {
+  // background-color: orangered;
+  float: left;
+
+  @media (max-width: 600px){
+   width: 80%  !important;
+   margin-left: 10%;
+  }
+
+  @media (max-width: 900px){
+   width: 85%  !important;
+   margin-left: 8%;
+  }
+
+  &:not(:last-child){
+    margin-right: 5rem;
+
+    @media (max-width: 600px){
+     margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 900px){
+     margin-bottom: 4rem;
+    }
+
+    @media (max-width: 1200px){
+     margin-right: 3rem;
+    }
+  }
+}
+
+.col-1-of-2 {
+  width: calc((100% - 5rem) /2 );
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 *( 5rem)) / 3 );
+}
+
+.col-2-of-3 {
+  width: calc(2* ((100% - 2 *( 5rem)) / 3 ) + 5rem);
+}
+
+.col-1-of-4 {
+  width: calc((100% - 3 *( 5rem)) / 4 );
+}
